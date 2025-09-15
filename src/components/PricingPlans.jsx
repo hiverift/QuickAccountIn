@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Self-contained Hero Component
-const ERPHeroSection = () => {
+const PricingPlans = () => {
   return (
     <section className="py-16 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
@@ -52,4 +52,4 @@ const ERPHeroSection = () => {
   );
 };
 
-export default ERPHeroSection;
+export default PricingPlans;

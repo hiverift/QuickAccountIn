@@ -6,11 +6,13 @@ import DemoPreview from '../components/DemoPreview'
 import Integration from '../components/Integration'
 import PricingPlans from '../components/PricingPlans'
 import CTA from '../components/CTA'
+import Subfooter from '../components/subfooter'
+
 
 
 export default function HomePage(){
 return (
-<div>
+<div className='overflow-x-hidden'>
 <Hero />
 <div className="">
 <ProductOverview />
@@ -19,6 +21,7 @@ return (
 <Integration />
 <PricingPlans />
 <CTA />
+<Subfooter/>
 </div>
 </div>
 )

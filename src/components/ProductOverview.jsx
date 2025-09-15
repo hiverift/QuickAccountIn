@@ -48,38 +48,40 @@ const ProductOverview = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-16">
-      <div className="container mx-auto px-6">
+    <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <p className="text-gray-600 text-sm mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-gray-600 text-sm sm:text-base mb-4">
             Streamline Every Department in One Unified ERP Platform
           </p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Product Overview
           </h2>
-          <p className="text-gray-600 text-lg max-w-4xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-base sm:text-lg lg:text-lg max-w-3xl sm:max-w-4xl mx-auto leading-relaxed">
             Our cloud-based ERP system is modular, scalable, and built to grow with your business. 
             Whether you're managing finances, inventory, or people — everything is connected, in real-time.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-8 sm:p-10 md:p-12 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
               <div
-                className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-6`}
+                className={`w-16 h-16 sm:w-20 sm:h-20 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-4 sm:mb-6`}
               >
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-4">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>

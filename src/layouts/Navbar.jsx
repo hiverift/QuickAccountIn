@@ -117,7 +117,7 @@ export default function Navbar() {
 
         {/* Auth Buttons */}
         <div className="hidden md:flex gap-4 items-center text-lg">
-          <Link to="/signin" className="text-gray-700 hover:text-gray-900">Sign in</Link>
+          <Link to="/signin" className="text-gray-700 hover:text-gray-900">SignUp</Link>
           <Link to="/login" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded">
             Login
           </Link>

@@ -13,7 +13,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-gray-900">
-          QuickAccountIn
+          <span className="text-2xl sm:text-3xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                  QuickAccounting
+                </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -29,7 +31,7 @@ export default function Navbar() {
     className="flex items-center gap-1 hover:text-gray-900"
     onClick={() => setOpenDropdown(!openDropdown)}
   >
-    Pages <ChevronDown size={18} />
+    Our Services <ChevronDown size={18} />
   </button>
 
   {openDropdown && (

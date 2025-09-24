@@ -14,6 +14,7 @@ import SignIn from './pages/SignIn'
 import LogIn from './pages/LogIn'
 import ComingSoon from "./components/ComingSoon";
 import Welcome from './components/Welcome'
+import QuickSupport from './pages/QuickSupport'
 
 export default function App() {
   const location = useLocation(); // Current route
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/LogIn" element={<LogIn/>} />
           <Route path="/comingsoon" element={<ComingSoon />} />
           <Route path="/Welcome" element={<Welcome />} />
+          <Route path='/QuickSupport' element={<QuickSupport/>}/>
         </Routes>
       </main>
       {!hideNavbar && <Footer />}

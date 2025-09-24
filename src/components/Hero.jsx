@@ -45,12 +45,14 @@ const ERPDashboardHero = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Badge */}
-        <div className="flex flex-wrap items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 w-fit mb-6 sm:mb-8 shadow-lg">
-          <Calendar className="w-5 h-5 text-purple-600" />
-          <span className="text-gray-700 text-sm sm:text-base font-medium">
-            Unified solutions for enterprise control, clarity, and scalability.
-          </span>
-        </div>
+<div className="flex flex-wrap items-center justify-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 w-fit mb-6 sm:mb-8 shadow-lg">
+  <Calendar className="w-5 h-5 text-purple-600 flex-shrink-0" />
+  <span className="text-gray-700 text-xs sm:text-sm md:text-base font-medium break-words text-center">
+    Unified solutions for enterprise control, clarity, and scalability.
+  </span>
+</div>
+
+
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left */}

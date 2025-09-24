@@ -5,7 +5,7 @@ const QuickAccountLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState(null); // {type: 'success'|'error', text: '...'}
+  const [message, setMessage] = useState(null);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -28,11 +28,11 @@ const QuickAccountLogin = () => {
       console.log("Login response:", data);
 
       if (response.ok) {
-        // Success
         setMessage({
           type: "success",
           text: "Login successful! Redirecting...",
         });
+
         const loggedInUser = data?.result?.user || {
           name: "Mh Shahbaz",
           email: "shahbaz@example.com",
@@ -42,14 +42,12 @@ const QuickAccountLogin = () => {
         };
 
         localStorage.setItem("user", JSON.stringify(loggedInUser));
-        localStorage.setItem("token", data.token || ""); // token optional
+        localStorage.setItem("token", data.token || "");
 
-        // Redirect after 1.5s
         setTimeout(() => {
-          window.location.href = "/Welcome"; // ya Dashboard page
+          window.location.href = "/Welcome";
         }, 1500);
       } else {
-        // Error from API
         setMessage({
           type: "error",
           text: data.message || "Invalid credentials",
@@ -63,18 +61,22 @@ const QuickAccountLogin = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 p-6">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 p-6 mt-15">
+      <div className="w-full max-w-md md:max-w-lg lg:max-w-xl bg-white rounded-2xl shadow-xl p-6 md:p-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">QuickAccount</h1>
-          <p className="text-gray-600 mt-2">Sign in to your company account</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
+            QuickAccount
+          </h1>
+          <p className="text-gray-600 mt-2 text-sm md:text-base">
+            Sign in to your company account
+          </p>
         </div>
 
         {/* Toast Message */}
         {message && (
           <div
-            className={`mb-4 px-4 py-2 rounded ${
+            className={`mb-4 px-4 py-2 rounded text-sm md:text-base ${
               message.type === "success"
                 ? "bg-green-100 text-green-800"
                 : "bg-red-100 text-red-800"
@@ -98,7 +100,7 @@ const QuickAccountLogin = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-purple-400 outline-none"
+                className="w-full pl-10 pr-4 py-2 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-purple-400 outline-none"
                 required
               />
             </div>
@@ -116,19 +118,22 @@ const QuickAccountLogin = () => {
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-purple-400 outline-none"
+                className="w-full pl-10 pr-4 py-2 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-purple-400 outline-none"
                 required
               />
             </div>
           </div>
 
           {/* Remember Me + Forgot Password */}
-          <div className="flex items-center justify-between text-sm">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between text-sm md:text-base gap-2">
             <label className="flex items-center gap-2 text-gray-600">
               <input type="checkbox" className="rounded text-purple-600" />
               Remember me
             </label>
-            <a href="#" className="text-purple-600 hover:underline font-medium">
+            <a
+              href="#"
+              className="text-purple-600 hover:underline font-medium"
+            >
               Forgot password?
             </a>
           </div>
@@ -146,9 +151,12 @@ const QuickAccountLogin = () => {
         </form>
 
         {/* Footer */}
-        <p className="text-center text-sm text-gray-600 mt-6">
+        <p className="text-center text-sm md:text-base text-gray-600 mt-6">
           Don’t have an account?{" "}
-          <a href="#" className="text-purple-600 font-semibold hover:underline">
+          <a
+            href="#"
+            className="text-purple-600 font-semibold hover:underline"
+          >
             Create one
           </a>
         </p>

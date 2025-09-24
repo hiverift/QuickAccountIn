@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Self-contained Hero Component
 const PricingPlans = () => {
@@ -19,12 +20,17 @@ const PricingPlans = () => {
               optimize manual work, improve efficiency and streamline your business 
               without slowing your processes.
             </p>
+<Link to = "/Contact">
+
+
             <button 
               className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               onClick={() => console.log('Contact Us clicked')}
             >
               Contact Us
             </button>
+</Link>
+
           </div>
           
           <div className="lg:flex lg:justify-end">

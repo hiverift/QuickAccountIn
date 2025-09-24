@@ -286,113 +286,129 @@ const ErphoriaLanding = () => {
 
 
         <div className="bg-white">
-      {/* Our Story Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          {/* Small Icon + Title */}
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-medium text-purple-600">Our Story</h3>
-          </div>
+ {/* Our Story Section */}
+<section className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    {/* Small Icon + Title */}
+    <div className="flex items-center gap-3 mb-8">
+      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+        <svg
+          className="w-6 h-6 text-purple-600"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </div>
+      <h3 className="text-lg font-medium text-purple-600">Our Story</h3>
+    </div>
 
-          {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold leading-tight text-gray-900 mb-0">
-                Erphoria began with a simple but powerful realization: traditional ERP systems were no longer keeping up with the pace of modern business. Bloated interfaces, rigid workflows, 
-                <span className="text-gray-500 font-normal"> and outdated infrastructure left growing companies stuck with tools that slowed them down instead of helping them scale.</span>
-              </h2>
-            </div>
+    {/* Main Content */}
+    <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+      {/* Left Content */}
+      <div className="flex flex-col justify-center">
+        <h2 className="text-2xl lg:text-3xl leading-relaxed text-gray-900 mb-0">
+          Erphoria began with a simple but powerful realization: traditional ERP systems were no longer keeping up with the pace of modern business.
+          Bloated interfaces, rigid workflows,
+          <span className="text-gray-500 font-normal">
+            and outdated infrastructure left growing companies stuck with tools that slowed them down instead of helping them scale.
+          </span>
+        </h2>
+        <p className="mt-6 text-lg text-gray-600">
+          Our mission is to build ERP solutions that are sleek, intuitive, and tailored to today’s fast-paced business environment.
+          We focus on simplicity, speed, and efficiency so you can focus on growth.
+        </p>
+      </div>
 
-            {/* Right Side - Hero Image */}
-            <div className="relative">
-              <div 
-                className="rounded-3xl overflow-hidden min-h-[400px] bg-gradient-to-br from-blue-600 via-purple-600 to-purple-800 relative"
-                style={{
-                  background: 'linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #581c87 100%)'
-                }}
-              >
-                {/* Overlay pattern for texture */}
-                <div className="absolute inset-0 bg-black bg-opacity-10"></div>
-                
-                {/* Simulated workspace scene */}
-                <div className="absolute inset-0 flex items-center justify-center p-8">
-                  {/* Left side - Desk/workspace simulation */}
-                  <div className="absolute left-0 bottom-0 w-3/5 h-3/5">
-                    {/* Desk surface */}
-                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-r from-blue-800 to-blue-700 opacity-60 transform skew-y-1"></div>
-                    
-                    {/* Monitor/Screen */}
-                    <div className="absolute bottom-16 left-8 w-32 h-20 bg-gray-800 rounded-lg">
-                      <div className="w-full h-16 bg-gradient-to-br from-blue-400 to-purple-300 rounded-t-lg p-2">
-                        {/* Simulated UI elements */}
-                        <div className="space-y-1">
-                          <div className="h-2 bg-white bg-opacity-40 rounded w-3/4"></div>
-                          <div className="h-1 bg-white bg-opacity-30 rounded w-1/2"></div>
-                          <div className="flex gap-1 mt-2">
-                            <div className="w-4 h-4 bg-white bg-opacity-50 rounded"></div>
-                            <div className="w-4 h-4 bg-white bg-opacity-50 rounded"></div>
-                            <div className="w-4 h-4 bg-white bg-opacity-50 rounded"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="h-4 bg-gray-700 rounded-b-lg"></div>
-                    </div>
+      {/* Right Side - Hero Image */}
+      <div className="relative flex items-center justify-center">
+        <div
+          className="rounded-3xl overflow-hidden w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-purple-800 relative"
+          style={{
+            background:
+              "linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #581c87 100%)",
+            minHeight: "500px", // Equal height
+          }}
+        >
+          {/* Overlay pattern for texture */}
+          <div className="absolute inset-0 bg-black bg-opacity-10"></div>
 
-                    {/* Laptop */}
-                    <div className="absolute bottom-8 right-4 w-24 h-16 bg-gray-700 rounded-lg transform -rotate-12">
-                      <div className="w-full h-12 bg-gradient-to-br from-indigo-400 to-blue-300 rounded-t-lg p-1">
-                        <div className="space-y-0.5">
-                          <div className="h-1 bg-white bg-opacity-50 rounded w-4/5"></div>
-                          <div className="h-1 bg-white bg-opacity-40 rounded w-3/5"></div>
-                          <div className="flex gap-0.5 mt-1">
-                            <div className="w-2 h-2 bg-white bg-opacity-60 rounded-sm"></div>
-                            <div className="w-2 h-2 bg-white bg-opacity-60 rounded-sm"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Documents/Papers */}
-                    <div className="absolute bottom-20 left-16 w-16 h-12 bg-white bg-opacity-20 rounded transform rotate-6"></div>
-                    <div className="absolute bottom-22 left-18 w-14 h-10 bg-white bg-opacity-15 rounded transform -rotate-3"></div>
-                  </div>
-
-                  {/* Right side - Person silhouette */}
-                  <div className="absolute right-8 bottom-0 w-2/5 h-4/5">
-                    {/* Person silhouette */}
-                    <div className="absolute bottom-0 right-8 w-20 h-40">
-                      {/* Head */}
-                      <div className="absolute top-0 right-6 w-8 h-8 bg-white bg-opacity-20 rounded-full"></div>
-                      {/* Torso */}
-                      <div className="absolute top-6 right-2 w-16 h-24 bg-white bg-opacity-15 rounded-t-3xl"></div>
-                      {/* Arms */}
-                      <div className="absolute top-12 right-0 w-6 h-16 bg-white bg-opacity-15 rounded-full transform rotate-12"></div>
-                      <div className="absolute top-12 right-14 w-6 h-12 bg-white bg-opacity-15 rounded-full transform -rotate-45"></div>
-                    </div>
-                    
-                    {/* Chair */}
-                    <div className="absolute bottom-0 right-4 w-16 h-20">
-                      <div className="absolute bottom-0 w-full h-8 bg-gray-800 bg-opacity-40 rounded-lg"></div>
-                      <div className="absolute bottom-6 left-2 w-12 h-16 bg-gray-800 bg-opacity-30 rounded-lg"></div>
+          {/* Simulated workspace scene */}
+          <div className="absolute inset-0 flex items-center justify-center p-8">
+            {/* Left side - Desk/workspace simulation */}
+            <div className="absolute left-0 bottom-0 w-3/5 h-3/5">
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-r from-blue-800 to-blue-700 opacity-60 transform skew-y-1"></div>
+              <div className="absolute bottom-16 left-8 w-32 h-20 bg-gray-800 rounded-lg">
+                <div className="w-full h-16 bg-gradient-to-br from-blue-400 to-purple-300 rounded-t-lg p-2">
+                  <div className="space-y-1">
+                    <div className="h-2 bg-white bg-opacity-40 rounded w-3/4"></div>
+                    <div className="h-1 bg-white bg-opacity-30 rounded w-1/2"></div>
+                    <div className="flex gap-1 mt-2">
+                      <div className="w-4 h-4 bg-white bg-opacity-50 rounded"></div>
+                      <div className="w-4 h-4 bg-white bg-opacity-50 rounded"></div>
+                      <div className="w-4 h-4 bg-white bg-opacity-50 rounded"></div>
                     </div>
                   </div>
                 </div>
+                <div className="h-4 bg-gray-700 rounded-b-lg"></div>
+              </div>
 
-                {/* Floating decorative elements */}
-                <div className="absolute top-8 right-8 w-16 h-16 bg-white bg-opacity-10 rounded-2xl animate-pulse"></div>
-                <div className="absolute bottom-12 left-8 w-12 h-12 bg-yellow-400 bg-opacity-30 rounded-xl animate-bounce" style={{animationDuration: '3s'}}></div>
-                <div className="absolute top-1/3 right-16 w-8 h-8 bg-white bg-opacity-15 rounded-lg animate-pulse" style={{animationDelay: '1s'}}></div>
+              {/* Laptop */}
+              <div className="absolute bottom-8 right-4 w-24 h-16 bg-gray-700 rounded-lg transform -rotate-12">
+                <div className="w-full h-12 bg-gradient-to-br from-indigo-400 to-blue-300 rounded-t-lg p-1">
+                  <div className="space-y-0.5">
+                    <div className="h-1 bg-white bg-opacity-50 rounded w-4/5"></div>
+                    <div className="h-1 bg-white bg-opacity-40 rounded w-3/5"></div>
+                    <div className="flex gap-0.5 mt-1">
+                      <div className="w-2 h-2 bg-white bg-opacity-60 rounded-sm"></div>
+                      <div className="w-2 h-2 bg-white bg-opacity-60 rounded-sm"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Documents */}
+              <div className="absolute bottom-20 left-16 w-16 h-12 bg-white bg-opacity-20 rounded transform rotate-6"></div>
+              <div className="absolute bottom-22 left-18 w-14 h-10 bg-white bg-opacity-15 rounded transform -rotate-3"></div>
+            </div>
+
+            {/* Right side - Person silhouette */}
+            <div className="absolute right-8 bottom-0 w-2/5 h-4/5">
+              <div className="absolute bottom-0 right-8 w-20 h-40">
+                <div className="absolute top-0 right-6 w-8 h-8 bg-white bg-opacity-20 rounded-full"></div>
+                <div className="absolute top-6 right-2 w-16 h-24 bg-white bg-opacity-15 rounded-t-3xl"></div>
+                <div className="absolute top-12 right-0 w-6 h-16 bg-white bg-opacity-15 rounded-full transform rotate-12"></div>
+                <div className="absolute top-12 right-14 w-6 h-12 bg-white bg-opacity-15 rounded-full transform -rotate-45"></div>
+              </div>
+
+              {/* Chair */}
+              <div className="absolute bottom-0 right-4 w-16 h-20">
+                <div className="absolute bottom-0 w-full h-8 bg-gray-800 bg-opacity-40 rounded-lg"></div>
+                <div className="absolute bottom-6 left-2 w-12 h-16 bg-gray-800 bg-opacity-30 rounded-lg"></div>
               </div>
             </div>
           </div>
+
+          {/* Decorative Elements */}
+          <div className="absolute top-8 right-8 w-16 h-16 bg-white bg-opacity-10 rounded-2xl animate-pulse"></div>
+          <div
+            className="absolute bottom-12 left-8 w-12 h-12 bg-yellow-400 bg-opacity-30 rounded-xl animate-bounce"
+            style={{ animationDuration: "3s" }}
+          ></div>
+          <div
+            className="absolute top-1/3 right-16 w-8 h-8 bg-white bg-opacity-15 rounded-lg animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Our Mission Section */}
     <section className="py-20 bg-gray-50">

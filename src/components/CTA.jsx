@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  Database,
-  BarChart3,
-  Triangle,
-  Layers,
-  Workflow,
-  GitBranch,
-  Network,
-} from "lucide-react";
+import account from "../assets/account.png";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   const plans = [
@@ -61,71 +54,29 @@ const CTA = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
-      {/* Header Card */}
-      <div className="bg-white rounded-2xl shadow-2xl py-16 px-4 sm:px-6 lg:px-12">
-        <div className="text-center mb-12">
-          <p className="text-gray-600 text-sm mb-4">
+      {/* Header */}
+      <div
+        className="relative rounded-2xl h-screen bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: `url(${account})` }}
+      >
+        <div className="absolute inset-0 bg-black/60 rounded-2xl"></div>
+        <div className="relative text-center max-w-2xl px-6">
+          <p className="text-white/80 text-sm mb-4">
             See the Platform in Action — No Signup Needed
           </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
             Connect Your ERP to the Tools You
             <br />
             Already Use
           </h1>
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
+          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
             View API Documentation
           </button>
-        </div>
-
-        {/* Animated Icons Grid */}
-        <div className="space-y-6">
-          {[0, 1, 2].map((row) => (
-            <div
-              key={row}
-              className="flex flex-wrap justify-center gap-4 overflow-hidden"
-            >
-              {Array(7)
-                .fill(0)
-                .map((_, index) => {
-                  const IconArray = [
-                    Database,
-                    BarChart3,
-                    BarChart3,
-                    Triangle,
-                    Layers,
-                    Workflow,
-                    GitBranch,
-                  ];
-                  const colors = [
-                    "bg-blue-600",
-                    "bg-blue-500",
-                    "bg-blue-400",
-                    "bg-blue-700",
-                    "bg-teal-500",
-                    "bg-cyan-400",
-                    "bg-blue-600",
-                  ];
-                  const Icon = IconArray[index];
-                  return (
-                    <div
-                      key={index}
-                      className={`w-16 h-16 ${colors[index]} rounded-xl shadow-lg flex items-center justify-center animate-float hover:shadow-xl transition-shadow duration-200`}
-                      style={{
-                        animationDelay: `${0.5 * index}s`,
-                        animationDuration: "4s",
-                      }}
-                    >
-                      <Icon className="w-8 h-8 text-white" strokeWidth={2} />
-                    </div>
-                  );
-                })}
-            </div>
-          ))}
         </div>
       </div>
 
       {/* Pricing Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8">
+      <div className="py-16 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
             <div className="text-center lg:text-left py-5">
@@ -137,7 +88,9 @@ const CTA = () => {
               </h1>
             </div>
             <p className="text-gray-600 text-lg text-center lg:text-right lg:max-w-md">
-              Whether you're just getting started or managing a complex operation, choose a plan that fits your business needs — and scale up anytime.
+              Whether you're just getting started or managing a complex
+              operation, choose a plan that fits your business needs — and scale
+              up anytime.
             </p>
           </div>
 
@@ -145,7 +98,7 @@ const CTA = () => {
             {plans.map((plan) => (
               <div
                 key={plan.id}
-                className="relative bg-gradient-to-br from-indigo-400 via-purple-400 to-indigo-500 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                className="relative bg-gradient-to-br from-indigo-400 via-purple-400 to-indigo-500 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="text-white mb-8">
                   <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
@@ -177,16 +130,13 @@ const CTA = () => {
                     ))}
                   </ul>
                 </div>
-
-                <button
-                  className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-200 ${
-                    plan.popular
-                      ? "bg-white text-indigo-600 hover:bg-indigo-50 shadow-lg"
-                      : "bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30"
-                  }`}
-                >
-                  {plan.buttonText}
-                </button>
+                <Link to="/Contact">
+                  <button
+                    className="w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-200 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 text-white hover:opacity-90"
+                  >
+                    {plan.buttonText}
+                  </button>
+                </Link>
               </div>
             ))}
           </div>
@@ -199,32 +149,6 @@ const CTA = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateX(0px);
-          }
-          25% {
-            transform: translateX(10px);
-          }
-          50% {
-            transform: translateX(-5px);
-          }
-          75% {
-            transform: translateX(8px);
-          }
-        }
-        .animate-float {
-          animation: float 4s ease-in-out infinite;
-        }
-        .animate-float:hover {
-          animation-play-state: paused;
-          transform: scale(1.1);
-          transition: transform 0.2s ease;
-        }
-      `}</style>
     </div>
   );
 };

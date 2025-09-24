@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Users, MessageCircle, Eye, ArrowRight, BarChart3, PieChart, TrendingUp, MapPin, Calendar, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Aaboutlast = () => {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -92,9 +93,11 @@ const Aaboutlast = () => {
               <p className="text-gray-600 mb-6 max-w-2xl">
                 Our ERP platform is packed with powerful features designed to eliminate manual work, enhance accuracy, and help your business grow — without growing your overhead.
               </p>
+        <Link to= "/Contact"> 
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
                 Contact Us
               </button>
+</Link>
             </div>
             
             {/* Testimonial Card */}

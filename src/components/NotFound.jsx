@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 export default function NotFound() {
   const location = useLocation();
   // Agar path A se start hota hai
-  const isAStartPath = /^\/A/.test(location.pathname);
+const isAStartPath = /^\/A/.test(location.pathname); // case-sensitive ✅
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-500 to-pink-500 p-4 relative">
       {/* Grid Background */}

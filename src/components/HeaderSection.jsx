@@ -25,10 +25,10 @@ export default function HeaderSection() {
             href="tel:+18337832491"
             className="px-5 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
           >
-            Call Us: +1-833-783-2491
+            Call Us: +91-833-783-2491
           </a>
         </div>
       </div>
     </div>
   );
-}
+}``
